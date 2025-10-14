@@ -1,0 +1,16 @@
+  135  cat > HelloWorld.c << 'EOF'\n#include <stdio.h>\nint main(void) {\n    printf("Hello Crazy World!\n");\n    return 0;\n}\nEOF
+  136  git status
+  137  git add HelloWorld.c\ngit commit -m "Change to Hello Crool World\n
+  138  git add HelloWorld.c
+  139  git commit -m "Change to Hello Crool World!\n
+  140  git commit -m "Change to Hello Crool World\n
+  141  cd ~/GitLab\n
+  142  echo '#include <stdio.h>\nint main(void) {\n    printf("Hello Crool World!\\n");\n    return 0;\n}' > HelloWorld.c\n
+  143  cat HelloWorld.c\n
+  144  git add HelloWorld.c\ngit commit\n
+  145  git push\n
+  146  git merge Happy\n
+  147  git push\n
+  148  echo '#include <stdio.h>\nint main(void) {\n    printf("Hello Crazy World!\\n");\n    return 0;\n}' > HelloWorld.c\n
+  149  git add HelloWorld.c\ngit commit\n
+  150  git push\n
