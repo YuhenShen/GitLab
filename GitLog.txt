@@ -1,3 +1,6 @@
+* f1dd869 (HEAD -> main, origin/main) Merge Happy into main: Hello Very Happy World!
+* 99c0bc2 Add GittingAlong and GitLog text files
+* 4d73f6f Add GitHub network graph screenshot
 * bf17233 Change to Hello Crazy World!
 * f7125d7 Change to Hello Crool World!
-* f33ee60 Initial commit: Hello World
+* f33ee60 (origin/Happy, Happy) Initial commit: Hello World
