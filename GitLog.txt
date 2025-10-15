@@ -1,2 +1,17 @@
-* 80f01ec (HEAD -> main, origin/main) Clean up and finalize GittingAlong.txt
+* 7913c2a (HEAD -> main, origin/main) Simplified GitLog.txt for final submission
+* 80f01ec Clean up and finalize GittingAlong.txt
+* b23cded Add GittingAlong, GitLog text, and GitHub network graph screenshot
+* 09322c4 Change to Hello Crazy World!
+* c4a7fd2 Merge Happy into main: Hello Very Happy World!
+* 44f9bcf Change to Hello Very Crool World!
+* e64173b Change to Hello Happy World!
+* 87a4cc0 Change to Hello Crool World!
+* f899c67 Initial commit: Hello World
+* 38d37b9 Update GitHub network graph screenshot after merge
+* fbed2b4 Update GitLog.txt with full branch graph
+* f1dd869 Merge Happy into main: Hello Very Happy World!
+* 99c0bc2 Add GittingAlong and GitLog text files
+* 4d73f6f Add GitHub network graph screenshot
+* bf17233 Change to Hello Crazy World!
+* f7125d7 Change to Hello Crool World!
 * f33ee60 (origin/Happy, Happy) Initial commit: Hello World
