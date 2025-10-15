@@ -1,16 +1,90 @@
-  135  cat > HelloWorld.c << 'EOF'\n#include <stdio.h>\nint main(void) {\n    printf("Hello Crazy World!\n");\n    return 0;\n}\nEOF
-  136  git status
-  137  git add HelloWorld.c\ngit commit -m "Change to Hello Crool World\n
-  138  git add HelloWorld.c
-  139  git commit -m "Change to Hello Crool World!\n
-  140  git commit -m "Change to Hello Crool World\n
-  141  cd ~/GitLab\n
-  142  echo '#include <stdio.h>\nint main(void) {\n    printf("Hello Crool World!\\n");\n    return 0;\n}' > HelloWorld.c\n
-  143  cat HelloWorld.c\n
-  144  git add HelloWorld.c\ngit commit\n
-  145  git push\n
-  146  git merge Happy\n
-  147  git push\n
-  148  echo '#include <stdio.h>\nint main(void) {\n    printf("Hello Crazy World!\\n");\n    return 0;\n}' > HelloWorld.c\n
-  149  git add HelloWorld.c\ngit commit\n
-  150  git push\n
+cd ~
+mkdir -p GitLab
+cd GitLab
+
+# Initial setup
+cat > HelloWorld.c << 'EOF'
+#include <stdio.h>
+int main(void) {
+    printf("Hello World!\n");
+    return 0;
+}
+EOF
+
+git init
+git add HelloWorld.c
+git commit -m 'Initial commit: Hello World'
+git branch -M main
+git remote add origin https://github.com/YuhenShen/GitLab.git
+git push -u origin main
+
+# Edit 1 – Hello Crool World
+cat > HelloWorld.c << 'EOF'
+#include <stdio.h>
+int main(void) {
+    printf("Hello Crool World!\n");
+    return 0;
+}
+EOF
+git add HelloWorld.c
+git commit -m 'Change to Hello Crool World!'
+git push
+
+# Create Happy branch and edit 2 – Hello Happy World
+git switch -c Happy
+git push -u origin Happy
+cat > HelloWorld.c << 'EOF'
+#include <stdio.h>
+int main(void) {
+    printf("Hello Happy World!\n");
+    return 0;
+}
+EOF
+git add HelloWorld.c
+git commit -m 'Change to Hello Happy World!'
+git push
+
+# Back to main – Hello Very Crool World
+git switch main
+cat > HelloWorld.c << 'EOF'
+#include <stdio.h>
+int main(void) {
+    printf("Hello Very Crool World!\n");
+    return 0;
+}
+EOF
+git add HelloWorld.c
+git commit -m 'Change to Hello Very Crool World!'
+git push
+
+# Merge Happy into main – Hello Very Happy World
+git merge Happy
+cat > HelloWorld.c << 'EOF'
+#include <stdio.h>
+int main(void) {
+    printf("Hello Very Happy World!\n");
+    return 0;
+}
+EOF
+git add HelloWorld.c
+git commit -m 'Merge Happy into main: Hello Very Happy World!'
+git push
+
+# Final edit – Hello Crazy World
+cat > HelloWorld.c << 'EOF'
+#include <stdio.h>
+int main(void) {
+    printf("Hello Crazy World!\n");
+    return 0;
+}
+EOF
+git add HelloWorld.c
+git commit -m 'Change to Hello Crazy World!'
+git push
+
+# Save logs and screenshot
+git log --all --graph --decorate --oneline > GitLog.txt
+# (Take GitHub Insights → Network screenshot and save as GitLog.png)
+git add GittingAlong.txt GitLog.txt GitLog.png
+git commit -m 'Add GittingAlong, GitLog text, and GitHub network graph screenshot'
+git push
